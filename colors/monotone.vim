@@ -189,12 +189,6 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 	hi Underlined   guifg=NONE     guibg=NONE  gui=underline    ctermfg=NONE  ctermbg=NONE  cterm=underline
 	hi Title        guifg=NONE     guibg=NONE  gui=bold         ctermfg=NONE  ctermbg=NONE  cterm=bold
 
-	" Diff highlighting
-	hi DiffAdd     guifg=#88aa77  guibg=NONE  gui=NONE       ctermfg=107  ctermbg=NONE  cterm=NONE
-	hi DiffDelete  guifg=#aa7766  guibg=NONE  gui=NONE       ctermfg=137  ctermbg=NONE  cterm=NONE
-	hi DiffChange  guifg=#7788aa  guibg=NONE  gui=NONE       ctermfg=67   ctermbg=NONE  cterm=NONE
-	hi DiffText    guifg=#7788aa  guibg=NONE  gui=underline  ctermfg=67   ctermbg=NONE  cterm=underline
-
 	" Quickfix window (some groups need custom 'winhl')
 	hi QuickFixLine guibg=#333333
 	hi QFNormal guibg=#222222
@@ -253,6 +247,13 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
 
 	" Highlightedyank
 	hi link HighlightedyankRegion Warning
+
+    " Diff
+    hi diffdelete guibg='#2b1f1f' guifg='#db5e5e' gui=NONE
+    hi difftext guibg='#40392b' guifg='#e3b354' gui=NONE
+    hi diffchange guibg='#40392b' guifg=NONE gui=NONE
+    hi diffadd guibg='#212b21' guifg='#6acc6c' gui=NONE
+
 endfunction
 
 call s:MonotoneColors(
