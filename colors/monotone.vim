@@ -254,6 +254,8 @@ function s:MonotoneColors(color, secondary_hue_offset, emphasize_comments, empha
     hi diffchange guibg='#40392b' guifg=NONE gui=NONE
     hi diffadd guibg='#212b21' guifg='#6acc6c' gui=NONE
 
+    " Special key (, ^M)
+    hi SpecialKey guifg='#888888' guibg=NONE
 endfunction
 
 call s:MonotoneColors(
